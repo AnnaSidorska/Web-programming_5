@@ -106,14 +106,18 @@
             <div class="que__item">
                 Залишилися питання?
                 <p>Потребуєте допомоги у виборі? Наш менеджер допоможе<br> знайти відповіді на кожне ваше питання</p>
+
                 <form action="/contacts/submit" method="post">
                     @csrf
                     <div class="intro__form">
-                        <label for="name"></label><input type="text" id="name" placeholder="Ім'я">
-                        <label for="phone"></label><input type="text" id="phone" placeholder="Номер телефону">
-                        <label for="email"></label><input type="text" id="email" placeholder="Електрона пошта">
+                        <label for="name"></label>
+                        <input type="text" name="name" placeholder="Ім'я">
+                        <label for="phone"></label>
+                        <input type="text" name="phone" placeholder="Номер телефону">
+                        <label for="email"></label>
+                        <input type="text" name="email" placeholder="Електрона пошта">
                     </div>
-                    <a class="button" href="/contacts/submit">Отримати допомогу</a>
+                    <button type="submit" class="button">Отримати допомогу</button>
                 </form>
 
             </div>

@@ -186,15 +186,17 @@
             <div class="tile__item other_tile">
                 <div class="other__title">Виникли труднощі з вибором абонементу?</div>
                 <div class="other__text">Залиште заявку, і ми зателефонуємо вам,<br> щоб допомогти з вибором.</div>
+
                 <form action="/subscription/submit" method="post">
                     @csrf
                     <div class="questions__form">
-                        <label for="name"></label><input type="text" id="name" placeholder="Ім'я">
-                        <label for="phone"></label><input type="text" id="phone" placeholder="Номер телефону">
+                        <label for="name"></label>
+                        <input type="text" name="name" placeholder="Ім'я">
+                        <label for="phone"></label>
+                        <input type="text" name="phone" placeholder="Номер телефону">
                     </div>
-                    <a class="button questions__button" href="/subscription/submit">Надіслати заявку</a>
+                    <button type="submit" class="button questions__button">Надіслати заявку</button>
                 </form>
-
 
             </div>
         </div>
@@ -237,14 +239,18 @@
             <div class="que__item">
                 Залишилися питання?
                 <p>Потребуєте допомоги у виборі? Наш менеджер допоможе<br> знайти відповіді на кожне ваше питання</p>
-                <form action="/subscription/submit1" method="post">
+
+                <form action="/subscription/submit/second" method="post">
                     @csrf
                     <div class="intro__form">
-                        <label for="name"></label><input type="text" id="name2" placeholder="Ім'я">
-                        <label for="phone"></label><input type="text" id="phone2" placeholder="Номер телефону">
-                        <label for="email"></label><input type="text" id="email" placeholder="Електрона пошта">
+                        <label for="name"></label>
+                        <input type="text" name="name" placeholder="Ім'я">
+                        <label for="phone"></label>
+                        <input type="text" name="phone" placeholder="Номер телефону">
+                        <label for="email"></label>
+                        <input type="text" name="email" placeholder="Електрона пошта">
                     </div>
-                    <a class="button" href="/subscription/submit1">Отримати допомогу</a>
+                    <button type="submit" class="button">Отримати допомогу</button>
                 </form>
 
             </div>

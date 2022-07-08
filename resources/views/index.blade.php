@@ -73,28 +73,22 @@
       <div class="intro__subtitle">Йдеш у спортзал вперше? Не знаєш, з чого почати?<br>
         Пропонуємо спробувати з першого безкоштовного тренування з найкращими тренерами Києва.</div>
 
-        <form action="/index/submit" method="post">
+        <form action="{{route('index-form')}}" method="post">
            @csrf
             <div class="intro__form">
-                <label for="name"></label><input type="text" id="name" placeholder="Ім'я">
-                <label for="phone"></label><input type="text" id="phone" placeholder="Номер телефону">
+                <label for="name"></label>
+                <input type="text" name="name" placeholder="Ім'я">
+                <label for="phone"></label>
+                <input type="text" name="phone" placeholder="Номер телефону">
             </div>
-            <a class="button" href="/index/submit">Записатися на тренування</a>
+            <button type="submit" class="button">Записатися на тренування</button>
         </form>
-
-
 
     </div>
   </div>
 </div>
 
-<div class="button__block">
-  <div class="container">
-    <a class="but but1" href="/about_us">Про нас</a>
-    <a class="but but2" href="/contacts">Контакти</a>
-    <a class="but but3" href="/abonemets">Абонементи</a>
-  </div>
-</div>
+@include('partials.buttons')
 
 <div class="trainers">
   <div class="container">

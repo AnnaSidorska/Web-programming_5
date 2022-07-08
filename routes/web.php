@@ -9,8 +9,10 @@ Route::get('/trainers', 'App\Http\Controllers\MainController@trainers')->name('t
 Route::get('/about_us', 'App\Http\Controllers\MainController@about_us')->name('about_us');
 Route::get('/contacts', 'App\Http\Controllers\MainController@contacts')->name('contacts');
 
-Route::get('/index/submit', 'App\Http\Controllers\FormController@getHelp')->name('index-form');
-Route::get('/subscription/submit', 'App\Http\Controllers\FormController@getHelp')->name('subscription-form');
-Route::get('/subscription/submit1', 'App\Http\Controllers\FormController@getSub')->name('subscription-form1');
-Route::get('/trainers/submit', 'App\Http\Controllers\FormController@getHelp')->name('trainers-form');
-Route::get('/contacts/submit', 'App\Http\Controllers\FormController@getHelp')->name('contacts-form');
+Route::post('/index/submit', 'App\Http\Controllers\ContactController@indexsubmit')->name('index-form');
+Route::post('/subscription/submit', 'App\Http\Controllers\ContactController@subscriptionsubmit')->name('subscription-form');
+Route::post('/trainers/submit', 'App\Http\Controllers\ContactController@trainerssubmit')->name('trainers-form');
+
+Route::post('/subscription/submit/second', 'App\Http\Controllers\HelpController@subscriptionsubmit')->name('subscription-forms');
+Route::post('/contacts/submit', 'App\Http\Controllers\HelpController@contactsubmit')->name('contacts-forms');
+

@@ -76,13 +76,7 @@
     </div>
 </div>
 
-<div class="button__block">
-    <div class="container">
-        <a class="but but1" href="/about_us">Про нас</a>
-        <a class="but but2" href="/contacts">Контакти</a>
-        <a class="but but3" href="/subscription">Абонементи</a>
-    </div>
-</div>
+@include('partials.buttons')
 
 <div class="professionals">
     <div class="container">
@@ -136,13 +130,15 @@
                 <div class="professionals__item set">
                     <div class="other__title" style="color:white">Потрібна допомога у виборі тренера?</div>
                     <div class="other__text">Залиште заявку, і ми зателефонуємо вам,<br> щоб допомогти з вибором.</div>
-                    <form action="/trainers/submit" method="post">
+                    <form action="{{route('trainers-form')}}" method="post">
                         @csrf
                         <div class="questions__form">
-                            <label for="name"></label><input type="text" id="name" placeholder="Ім'я">
-                            <label for="phone"></label><input type="text" id="phone" placeholder="Номер телефону">
+                            <label for="name"></label>
+                            <input type="text" name="name" placeholder="Ім'я">
+                            <label for="phone"></label>
+                            <input type="text" name="phone" placeholder="Номер телефону">
                         </div>
-                        <a class="button questions__button" href="/trainers/submit">Надіслати заявку</a>
+                        <button type="submit" class="button questions__button">Надіслати заявку</button>
                     </form>
                 </div>
                 </div>
