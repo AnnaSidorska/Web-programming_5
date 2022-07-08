@@ -19,7 +19,7 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return redirect()->route('index')->with('success', 'Okey');
+        return redirect()->route('index');
     }
 
     public function subscriptionsubmit(Request $req) {
@@ -35,7 +35,7 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return redirect()->route('subscription')->with('success', 'Okey');
+        return redirect()->route('subscription');
     }
 
     public function trainerssubmit(Request $req) {
@@ -51,7 +51,7 @@ class ContactController extends Controller
 
         $contact->save();
 
-        return redirect()->route('trainers')->with('success', 'Okey');
+        return redirect()->route('trainers');
     }
 
 

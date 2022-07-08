@@ -22,7 +22,7 @@ class HelpController extends Controller
 
         $help->save();
 
-        return redirect()->route('contacts')->with('success', 'Okey');
+        return redirect()->route('contacts');
     }
 
     public function subscriptionsubmit(Request $req) {
@@ -40,6 +40,6 @@ class HelpController extends Controller
 
         $help->save();
 
-        return redirect()->route('subscription')->with('success', 'Okey');
+        return redirect()->route('subscription');
     }
 }
